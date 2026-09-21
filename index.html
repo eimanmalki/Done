@@ -710,6 +710,14 @@ h1, h2, h3, h4, h5, h6, p, span, a, label, strong, small, div {
 }
 
 </style>
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#ff6a13">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ثقافة تـــم">
+<link rel="apple-touch-icon" href="icon-192.png">
+
 </head>
 
 <body>
@@ -1265,6 +1273,15 @@ function escapeHTML(text) {
 
 renderالتحديات();
 
+</script>
+
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("./service-worker.js").catch(function () {});
+  });
+}
 </script>
 
 </body>
